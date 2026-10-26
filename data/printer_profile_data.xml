@@ -1,0 +1,19 @@
+<odoo noupdate="1">
+    <record id="profile_rongta_rpp30" model="ff.pos.printer.profile">
+        <field name="name">Rongta RPP30 (Experimental / Not Verified)</field>
+        <field name="manufacturer">Rongta</field>
+        <field name="model_name">RPP30</field>
+        <field name="verification_status">experimental</field>
+        <field name="protocol">unset</field>
+        <field name="paper_width_mm">72</field>
+        <field name="resolution_dpi">203</field>
+        <field name="notes">Rongta's public product page lists 72 mm media width, 203 dpi, and ESC/CPCL/TSPL. Effective printable dots, BLE GATT UUIDs, Web Bluetooth write behavior, and receipt-mode command validation are not established here. Obtain these details for the exact model/firmware. Hardware verification is required.</field>
+    </record>
+    <record id="profile_generic_ble" model="ff.pos.printer.profile">
+        <field name="name">Generic BLE Thermal Printer (Manual Configuration)</field>
+        <field name="manufacturer">Generic</field>
+        <field name="verification_status">incomplete</field>
+        <field name="protocol">unset</field>
+        <field name="notes">Requires manufacturer-confirmed GATT UUIDs and a printer protocol confirmed for the exact device. ESC/POS Raster is an explicit compatibility gate and is not a universal printer claim.</field>
+    </record>
+</odoo>

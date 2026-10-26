@@ -1,0 +1,37 @@
+<odoo>
+    <record id="view_ff_pos_printer_profile_list" model="ir.ui.view">
+        <field name="name">ff.pos.printer.profile.list</field>
+        <field name="model">ff.pos.printer.profile</field>
+        <field name="arch" type="xml">
+            <list string="Bluetooth Printer Profiles">
+                <field name="name"/><field name="manufacturer"/><field name="model_name"/>
+                <field name="company_id" groups="base.group_multi_company"/><field name="verification_status"/>
+                <field name="protocol"/><field name="active"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_ff_pos_printer_profile_form" model="ir.ui.view">
+        <field name="name">ff.pos.printer.profile.form</field>
+        <field name="model">ff.pos.printer.profile</field>
+        <field name="arch" type="xml">
+            <form string="Bluetooth Printer Profile">
+                <sheet>
+                    <div class="alert alert-warning" role="alert">Only enter Bluetooth UUIDs and printer capabilities verified for the exact device model and firmware.</div>
+                    <group>
+                        <group><field name="name"/><field name="manufacturer"/><field name="model_name"/><field name="company_id" groups="base.group_multi_company"/><field name="active"/></group>
+                        <group><field name="verification_status"/><field name="protocol"/><field name="paper_width_mm"/><field name="printable_width_dots"/><field name="resolution_dpi"/></group>
+                    </group>
+                    <group string="Bluetooth GATT">
+                        <field name="service_uuid"/><field name="write_characteristic_uuid"/><field name="notification_characteristic_uuid"/>
+                        <field name="chunk_size"/><field name="inter_chunk_delay_ms"/>
+                    </group>
+                    <group><field name="notes"/><field name="verified_capabilities"/><field name="verification_evidence"/></group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_ff_pos_printer_profiles" model="ir.actions.act_window">
+        <field name="name">Bluetooth Printer Profiles</field><field name="res_model">ff.pos.printer.profile</field><field name="view_mode">list,form</field>
+    </record>
+    <menuitem id="menu_ff_pos_printer_profiles" name="Bluetooth Printer Profiles" parent="point_of_sale.menu_point_root" action="action_ff_pos_printer_profiles" groups="point_of_sale.group_pos_manager" sequence="80"/>
+</odoo>

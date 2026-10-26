@@ -1,0 +1,19 @@
+<odoo>
+    <record id="view_pos_config_form_bluetooth_printer" model="ir.ui.view">
+        <field name="name">pos.config.form.bluetooth.printer</field>
+        <field name="model">pos.config</field>
+        <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/sheet/div/notebook" position="inside">
+                    <page string="Bluetooth Receipt Printer" groups="point_of_sale.group_pos_manager">
+                        <group>
+                            <group><field name="ff_bluetooth_enabled"/><field name="ff_printer_profile_id" domain="[('active', '=', True), ('company_id', '=', company_id)]" options="{'no_create': True}"/><field name="ff_print_mode"/><field name="ff_connection_behavior"/></group>
+                            <group><field name="ff_native_fallback"/><field name="ff_rendering_mode"/><field name="ff_diagnostic_mode"/></group>
+                        </group>
+                        <group string="Connection Limits"><field name="ff_ble_connection_timeout"/><field name="ff_ble_write_timeout"/></group>
+                        <div class="alert alert-info" role="alert">Bluetooth discovery requires a secure browser context and a profile with confirmed GATT UUIDs. Automatic mode never opens a browser device chooser or interrupts payment validation.</div>
+                    </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

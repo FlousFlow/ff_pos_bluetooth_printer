@@ -1,0 +1,298 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Enable Bluetooth Receipt Printing"
+msgstr ""
+
+msgid "Bluetooth Printer Profile"
+msgstr ""
+
+msgid "Bluetooth Printer"
+msgstr ""
+
+msgid "Bluetooth Printing Mode"
+msgstr ""
+
+msgid "Default Printer Connection Behavior"
+msgstr ""
+
+msgid "Connect on Cashier Request"
+msgstr ""
+
+msgid "Reconnect After a Known Disconnect"
+msgstr ""
+
+msgid "Manual"
+msgstr ""
+
+msgid "Automatic"
+msgstr ""
+
+msgid "BLE Connection Timeout (seconds)"
+msgstr ""
+
+msgid "BLE Write Timeout (seconds)"
+msgstr ""
+
+msgid "Bluetooth Diagnostic Mode"
+msgstr ""
+
+msgid "Use Native Printer Fallback"
+msgstr ""
+
+msgid "Rendering Mode"
+msgstr ""
+
+msgid "Rasterize Odoo Receipt"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid "Model"
+msgstr ""
+
+msgid "GATT Service UUID"
+msgstr ""
+
+msgid "Write Characteristic UUID"
+msgstr ""
+
+msgid "Notification Characteristic UUID"
+msgstr ""
+
+msgid "Verification Status"
+msgstr ""
+
+msgid "Requires Configuration"
+msgstr ""
+
+msgid "Experimental / Not Hardware Verified"
+msgstr ""
+
+msgid "Hardware Verified"
+msgstr ""
+
+msgid "Protocol"
+msgstr ""
+
+msgid "Not Selected"
+msgstr ""
+
+msgid "ESC/POS Raster (Explicit Compatibility Gate)"
+msgstr ""
+
+msgid "Custom / Not Implemented"
+msgstr ""
+
+msgid "Only record capabilities confirmed on this exact printer/firmware."
+msgstr ""
+
+msgid "Must come from the manufacturer or BLE inspection; never guess this value."
+msgstr ""
+
+msgid "Enter a valid 16-bit, 32-bit, or 128-bit Bluetooth UUID."
+msgstr ""
+
+msgid "Chunk size must be between 20 and 512 bytes."
+msgstr ""
+
+msgid "Inter-chunk delay must be between 0 and 1000 ms."
+msgstr ""
+
+msgid "Printer paper dimensions and resolution are outside supported configuration limits."
+msgstr ""
+
+msgid "A verified profile requires confirmed GATT UUIDs, raster protocol, printable width, and hardware evidence."
+msgstr ""
+
+msgid "Bluetooth timeouts are outside the supported range."
+msgstr ""
+
+msgid "The Bluetooth printer profile must belong to the same company as this point of sale."
+msgstr ""
+
+msgid "Bluetooth Receipt Printer"
+msgstr ""
+
+msgid "Connection Limits"
+msgstr ""
+
+msgid "Bluetooth discovery requires a secure browser context and a profile with confirmed GATT UUIDs. Automatic mode never opens a browser device chooser or interrupts payment validation."
+msgstr ""
+
+msgid "Only enter Bluetooth UUIDs and printer capabilities verified for the exact device model and firmware."
+msgstr ""
+
+msgid "Bluetooth GATT"
+msgstr ""
+
+msgid "Bluetooth Printer Profiles"
+msgstr ""
+
+msgid "Bluetooth receipt transmission failed. Check printer status before retrying."
+msgstr ""
+
+msgid "Receipt data transmitted; paper output is not confirmed."
+msgstr ""
+
+msgid "Bluetooth printer is not ready. Use the configured native printer or connect Bluetooth first."
+msgstr ""
+
+msgid "Printer Ready"
+msgstr ""
+
+msgid "Printer connection failed. Check the configured UUIDs and browser permissions."
+msgstr ""
+
+msgid "Rongta RPP30 (Experimental / Not Verified)"
+msgstr ""
+
+msgid "Generic BLE Thermal Printer (Manual Configuration)"
+msgstr ""
+
+msgid "Profile Name"
+msgstr ""
+
+msgid "Manufacturer"
+msgstr ""
+
+msgid "Company"
+msgstr ""
+
+msgid "Active"
+msgstr ""
+
+msgid "Paper Width (mm)"
+msgstr ""
+
+msgid "Effective Printable Width (dots)"
+msgstr ""
+
+msgid "Print Resolution (dpi)"
+msgstr ""
+
+msgid "BLE Chunk Size (bytes)"
+msgstr ""
+
+msgid "Inter-chunk Delay (ms)"
+msgstr ""
+
+msgid "Known Limitations and Notes"
+msgstr ""
+
+msgid "Verified Capabilities"
+msgstr ""
+
+msgid "Hardware Verification Evidence"
+msgstr ""
+
+msgid "Disconnect"
+msgstr ""
+
+msgid "Connect Printer"
+msgstr ""
+
+msgid "Test Print"
+msgstr ""
+
+msgid "Diagnostics"
+msgstr ""
+
+msgid "Copy Diagnostic Report"
+msgstr ""
+
+msgid "Test data sent. Confirm the paper output at the printer."
+msgstr ""
+
+msgid "Test print failed. Check the connection and profile."
+msgstr ""
+
+msgid "Diagnostic report copied."
+msgstr ""
+
+msgid "Could not copy the diagnostic report."
+msgstr ""
+
+msgid "Bluetooth Printer Diagnostics"
+msgstr ""
+
+msgid "Browser Compatibility"
+msgstr ""
+
+msgid "Device Selection"
+msgstr ""
+
+msgid "BLE Connection"
+msgstr ""
+
+msgid "GATT Validation"
+msgstr ""
+
+msgid "Test Data Transmission"
+msgstr ""
+
+msgid "Physical Print Confirmation"
+msgstr ""
+
+msgid "This secure page exposes Web Bluetooth."
+msgstr ""
+
+msgid "Web Bluetooth is unavailable or this page is not secure. Use HTTPS and a compatible browser."
+msgstr ""
+
+msgid "Continue"
+msgstr ""
+
+msgid "Select the intended printer in the browser's device chooser."
+msgstr ""
+
+msgid "Select and Connect Printer"
+msgstr ""
+
+msgid "The printer is connected to the configured GATT service."
+msgstr ""
+
+msgid "The printer is not connected. Select it again to reconnect."
+msgstr ""
+
+msgid "The configured service and a writable characteristic were found."
+msgstr ""
+
+msgid "GATT validation failed. Check the UUIDs and browser authorization; this does not prove the printer lacks the service."
+msgstr ""
+
+msgid "The test page uses the configured raster protocol. A completed BLE write does not confirm paper output."
+msgstr ""
+
+msgid "Send Test Page"
+msgstr ""
+
+msgid "Test data was sent. Inspect the printer and confirm what happened."
+msgstr ""
+
+msgid "I Confirmed the Test Page Printed"
+msgstr ""
+
+msgid "It Did Not Print"
+msgstr ""
+
+msgid "The cashier confirmed the paper output for this session."
+msgstr ""
+
+msgid "Paper output was not confirmed. Review the profile and printer before retrying."
+msgstr ""
+
+msgid "The diagnostic step failed. Check browser permissions, the connection, and the printer profile."
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "Flous Flow BLE Test"
+msgstr ""
+
+msgid "Output is unconfirmed until checked"
+msgstr ""

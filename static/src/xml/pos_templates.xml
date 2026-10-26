@@ -1,0 +1,71 @@
+<templates xml:space="preserve">
+    <t t-name="ff_pos_bluetooth_printer.BluetoothPrinterStatus" owl="1">
+        <button t-if="enabled" type="button" class="btn btn-light ff-bt-printer-status" t-on-click="toggleConnection" t-att-disabled="state.busy" t-att-title="label">
+            <i t-att-class="state.status === 'READY' ? 'fa fa-bluetooth-b text-success' : 'fa fa-bluetooth-b text-muted'" aria-hidden="true"/>
+            <span class="ms-1" t-if="state.status === 'READY'">Disconnect</span>
+            <span class="ms-1" t-else="">Connect Printer</span>
+        </button>
+        <button t-if="enabled and state.status === 'READY'" type="button" class="btn btn-light" t-on-click="testPrint" title.translate="Test Print"><i class="fa fa-print" aria-hidden="true"/><span class="ms-1 d-none d-md-inline">Test Print</span></button>
+        <button t-if="diagnosticsEnabled" type="button" class="btn btn-light" t-on-click="openDiagnostics" title.translate="Diagnostics"><i class="fa fa-stethoscope" aria-hidden="true"/><span class="ms-1 d-none d-md-inline">Diagnostics</span></button>
+    </t>
+    <t t-name="ff_pos_bluetooth_printer.BluetoothDiagnosticWizard" owl="1">
+        <Dialog size="'md'" title="title">
+            <div class="ff-bt-diagnostic" role="region" aria-live="polite">
+                <ol class="ff-bt-diagnostic-steps">
+                    <li t-att-class="state.step === 1 ? 'active' : ''">Browser Compatibility</li>
+                    <li t-att-class="state.step === 2 ? 'active' : ''">Device Selection</li>
+                    <li t-att-class="state.step === 3 ? 'active' : ''">BLE Connection</li>
+                    <li t-att-class="state.step === 4 ? 'active' : ''">GATT Validation</li>
+                    <li t-att-class="state.step === 5 ? 'active' : ''">Test Data Transmission</li>
+                    <li t-att-class="state.step === 6 ? 'active' : ''">Physical Print Confirmation</li>
+                </ol>
+                <section t-if="state.step === 1">
+                    <h4>Browser Compatibility</h4>
+                    <p t-if="browserSupported">This secure page exposes Web Bluetooth.</p>
+                    <p t-else="">Web Bluetooth is unavailable or this page is not secure. Use HTTPS and a compatible browser.</p>
+                    <button class="btn btn-primary btn-lg" t-on-click="nextStep" t-att-disabled="not browserSupported">Continue</button>
+                </section>
+                <section t-if="state.step === 2">
+                    <h4>Device Selection</h4>
+                    <p>Select the intended printer in the browser's device chooser.</p>
+                    <button class="btn btn-primary btn-lg" t-on-click="selectAndConnect" t-att-disabled="state.busy">Select and Connect Printer</button>
+                </section>
+                <section t-if="state.step === 3">
+                    <h4>BLE Connection</h4>
+                    <p t-if="connected">The printer is connected to the configured GATT service.</p>
+                    <p t-else="">The printer is not connected. Select it again to reconnect.</p>
+                    <button class="btn btn-primary btn-lg" t-on-click="nextStep" t-att-disabled="not connected">Continue</button>
+                </section>
+                <section t-if="state.step === 4">
+                    <h4>GATT Validation</h4>
+                    <p t-if="connected">The configured service and a writable characteristic were found.</p>
+                    <p t-else="">GATT validation failed. Check the UUIDs and browser authorization; this does not prove the printer lacks the service.</p>
+                    <button class="btn btn-primary btn-lg" t-on-click="nextStep" t-att-disabled="not connected">Continue</button>
+                </section>
+                <section t-if="state.step === 5">
+                    <h4>Test Data Transmission</h4>
+                    <p>The test page uses the configured raster protocol. A completed BLE write does not confirm paper output.</p>
+                    <button class="btn btn-primary btn-lg" t-on-click="sendTestPage" t-att-disabled="state.busy or not connected">Send Test Page</button>
+                </section>
+                <section t-if="state.step === 6">
+                    <h4>Physical Print Confirmation</h4>
+                    <p t-if="state.transmissionComplete">Test data was sent. Inspect the printer and confirm what happened.</p>
+                    <button t-if="state.confirmation === null" class="btn btn-primary btn-lg me-2" t-on-click="() => confirmPaperOutput(true)">I Confirmed the Test Page Printed</button>
+                    <button t-if="state.confirmation === null" class="btn btn-secondary btn-lg" t-on-click="() => confirmPaperOutput(false)">It Did Not Print</button>
+                    <p t-if="state.confirmation === true">The cashier confirmed the paper output for this session.</p>
+                    <p t-if="state.confirmation === false">Paper output was not confirmed. Review the profile and printer before retrying.</p>
+                </section>
+                <div t-if="state.error" class="alert alert-warning mt-3" role="alert">The diagnostic step failed. Check browser permissions, the connection, and the printer profile.</div>
+            </div>
+            <t t-set-slot="footer">
+                <button t-if="props.pos.config.ff_diagnostic_mode" class="btn btn-secondary btn-lg" t-on-click="copyDiagnosticReport">Copy Diagnostic Report</button>
+                <button class="btn btn-secondary btn-lg" t-on-click="props.close">Close</button>
+            </t>
+        </Dialog>
+    </t>
+    <t t-inherit="point_of_sale.Navbar" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('status-buttons')]" position="inside">
+            <BluetoothPrinterStatus/>
+        </xpath>
+    </t>
+</templates>

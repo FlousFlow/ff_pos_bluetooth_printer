@@ -1,0 +1,37 @@
+<div class="container">
+  <section class="oe_container">
+    <div class="oe_row oe_spaced">
+      <h2 class="oe_slogan">Flous Flow POS Bluetooth Printer</h2>
+      <h3 class="oe_slogan">Experimental browser-side BLE receipt printing for Odoo 19 Community</h3>
+      <p class="text-center"><img src="cover.png" alt="Flous Flow POS Bluetooth Printer cover. Experimental, hardware not verified." class="img-fluid" /></p>
+      <p class="oe_mt32">
+        Routes the existing Odoo Point of Sale receipt through a browser Web Bluetooth connection after the cashier selects a configured printer. Odoo remains responsible for the receipt values and payment flow.
+      </p>
+    </div>
+  </section>
+  <section class="oe_container">
+    <div class="oe_row oe_spaced">
+      <h3>Features</h3>
+      <ul>
+        <li>Per-POS printer profile, manual or automatic mode, connection limits, and explicit native fallback.</li>
+        <li>Browser-side GATT discovery with administrator-entered service and characteristic UUIDs.</li>
+        <li>Bounded raster encoding and ordered chunk transmission behind an explicit ESC/POS compatibility setting.</li>
+        <li>Automatic event deduplication and no automatic resend after uncertain transfer.</li>
+        <li>Safe connection diagnostics and a cashier-initiated test transmission.</li>
+      </ul>
+      <h3>Requirements and limitations</h3>
+      <ul>
+        <li>Odoo 19 Community with Point of Sale, HTTPS, and a browser that exposes Web Bluetooth.</li>
+        <li>Bluefy on iOS is the requested target browser, but compatibility has not been verified.</li>
+        <li>Rongta RPP30 is experimental and hardware-not-verified. Its GATT UUIDs and compatible receipt protocol are not supplied by this addon.</li>
+        <li>No native Safari or Chrome iOS support is claimed. No universal ESC/POS compatibility is claimed.</li>
+        <li>A successful Bluetooth write does not confirm paper output. Confirm at the printer.</li>
+        <li>CPCL and TSPL encoders, device acknowledgements, and validated device-specific settings are not included.</li>
+      </ul>
+      <h3>Setup</h3>
+      <p>Install the addon, configure the POS and a company profile, enter manufacturer-confirmed UUIDs, verify the printer protocol, connect from the POS toolbar, and run a test print. Start in manual mode with native fallback enabled.</p>
+      <p>See the included README, compatibility matrix, deployment guide, and physical hardware test plan for details.</p>
+      <p>Publisher: Flous Flow. Rongta and Bluefy are third-party product names; no partnership, certification, or endorsement is claimed.</p>
+    </div>
+  </section>
+</div>

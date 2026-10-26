@@ -1,0 +1,18 @@
+.ff-bt-printer-status {
+    min-height: 42px;
+    white-space: nowrap;
+}
+
+.ff-bt-diagnostic-steps {
+    padding-inline-start: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.ff-bt-diagnostic-steps .active {
+    color: #087fc1;
+    font-weight: 700;
+}
+
+.ff-bt-diagnostic section {
+    min-height: 8rem;
+}

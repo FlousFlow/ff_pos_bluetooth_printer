@@ -1,0 +1,305 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Flous Flow POS Bluetooth Printer 19.0.1.0.0\n"
+"Language: ar\n"
+"PO-Revision-Date: 2026-10-26 22:00+0200\n"
+"Last-Translator: Flous Flow\n"
+"Language-Team: Flous Flow\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+msgid "Enable Bluetooth Receipt Printing"
+msgstr "تفعيل طباعة الإيصالات عبر البلوتوث"
+
+msgid "Bluetooth Printer Profile"
+msgstr "ملف تعريف طابعة البلوتوث"
+
+msgid "Bluetooth Printer"
+msgstr "طابعة البلوتوث"
+
+msgid "Bluetooth Printing Mode"
+msgstr "وضع الطباعة عبر البلوتوث"
+
+msgid "Default Printer Connection Behavior"
+msgstr "سلوك اتصال الطابعة الافتراضي"
+
+msgid "Connect on Cashier Request"
+msgstr "الاتصال عند طلب أمين الصندوق"
+
+msgid "Reconnect After a Known Disconnect"
+msgstr "إعادة الاتصال بعد انقطاع معروف"
+
+msgid "Manual"
+msgstr "يدوي"
+
+msgid "Automatic"
+msgstr "تلقائي"
+
+msgid "BLE Connection Timeout (seconds)"
+msgstr "مهلة اتصال BLE (بالثواني)"
+
+msgid "BLE Write Timeout (seconds)"
+msgstr "مهلة الكتابة عبر BLE (بالثواني)"
+
+msgid "Bluetooth Diagnostic Mode"
+msgstr "وضع تشخيص البلوتوث"
+
+msgid "Use Native Printer Fallback"
+msgstr "استخدام الطابعة الأصلية كخيار بديل"
+
+msgid "Rendering Mode"
+msgstr "وضع العرض"
+
+msgid "Rasterize Odoo Receipt"
+msgstr "تحويل إيصال أودو إلى صورة نقطية"
+
+msgid "Disabled"
+msgstr "معطّل"
+
+msgid "Model"
+msgstr "الطراز"
+
+msgid "GATT Service UUID"
+msgstr "معرّف خدمة GATT"
+
+msgid "Write Characteristic UUID"
+msgstr "معرّف خاصية الكتابة"
+
+msgid "Notification Characteristic UUID"
+msgstr "معرّف خاصية الإشعارات"
+
+msgid "Verification Status"
+msgstr "حالة التحقق"
+
+msgid "Requires Configuration"
+msgstr "يتطلب الإعداد"
+
+msgid "Experimental / Not Hardware Verified"
+msgstr "تجريبي / لم يُختبر على الجهاز"
+
+msgid "Hardware Verified"
+msgstr "تم التحقق على الجهاز"
+
+msgid "Protocol"
+msgstr "البروتوكول"
+
+msgid "Not Selected"
+msgstr "غير محدد"
+
+msgid "ESC/POS Raster (Explicit Compatibility Gate)"
+msgstr "صورة نقطية ESC/POS (يتطلب تأكيد التوافق صراحةً)"
+
+msgid "Custom / Not Implemented"
+msgstr "مخصص / غير مطبق"
+
+msgid "Only record capabilities confirmed on this exact printer/firmware."
+msgstr "سجّل فقط الإمكانات التي تم التحقق منها على هذه الطابعة وإصدار البرنامج الثابت تحديداً."
+
+msgid "Must come from the manufacturer or BLE inspection; never guess this value."
+msgstr "يجب الحصول على القيمة من الشركة المصنّعة أو فحص BLE؛ لا تخمّنها مطلقاً."
+
+msgid "Enter a valid 16-bit, 32-bit, or 128-bit Bluetooth UUID."
+msgstr "أدخل معرّف UUID صالحاً للبلوتوث بطول 16 أو 32 أو 128 بت."
+
+msgid "Chunk size must be between 20 and 512 bytes."
+msgstr "يجب أن يكون حجم الجزء بين 20 و512 بايتاً."
+
+msgid "Inter-chunk delay must be between 0 and 1000 ms."
+msgstr "يجب أن يكون الفاصل بين الأجزاء بين 0 و1000 مللي ثانية."
+
+msgid "Printer paper dimensions and resolution are outside supported configuration limits."
+msgstr "أبعاد ورق الطابعة أو دقتها خارج حدود الإعداد المدعومة."
+
+msgid "A verified profile requires confirmed GATT UUIDs, raster protocol, printable width, and hardware evidence."
+msgstr "يتطلب الملف المتحقق منه معرّفات GATT مؤكدة وبروتوكولاً نقطياً وعرضاً قابلاً للطباعة وأدلة اختبار الجهاز."
+
+msgid "Bluetooth timeouts are outside the supported range."
+msgstr "مهلات البلوتوث خارج النطاق المدعوم."
+
+msgid "The Bluetooth printer profile must belong to the same company as this point of sale."
+msgstr "يجب أن ينتمي ملف تعريف طابعة البلوتوث إلى نفس شركة نقطة البيع."
+
+msgid "Bluetooth Receipt Printer"
+msgstr "طابعة الإيصالات عبر البلوتوث"
+
+msgid "Connection Limits"
+msgstr "حدود الاتصال"
+
+msgid "Bluetooth discovery requires a secure browser context and a profile with confirmed GATT UUIDs. Automatic mode never opens a browser device chooser or interrupts payment validation."
+msgstr "يتطلب اكتشاف أجهزة البلوتوث سياق متصفح آمناً وملف تعريف بمعرّفات GATT مؤكدة. لا يفتح الوضع التلقائي نافذة اختيار الجهاز ولا يوقف اعتماد الدفع."
+
+msgid "Only enter Bluetooth UUIDs and printer capabilities verified for the exact device model and firmware."
+msgstr "أدخل فقط معرّفات البلوتوث وإمكانات الطابعة التي تم التحقق منها للطراز وإصدار البرنامج الثابت المحددين."
+
+msgid "Bluetooth GATT"
+msgstr "GATT للبلوتوث"
+
+msgid "Bluetooth Printer Profiles"
+msgstr "ملفات تعريف طابعات البلوتوث"
+
+msgid "Bluetooth receipt transmission failed. Check printer status before retrying."
+msgstr "فشل إرسال بيانات الإيصال عبر البلوتوث. تحقّق من حالة الطابعة قبل إعادة المحاولة."
+
+msgid "Receipt data transmitted; paper output is not confirmed."
+msgstr "تم إرسال بيانات الإيصال؛ لم يتم تأكيد الطباعة على الورق."
+
+msgid "Bluetooth printer is not ready. Use the configured native printer or connect Bluetooth first."
+msgstr "طابعة البلوتوث غير جاهزة. استخدم الطابعة الأصلية المُعدة أو اتصل بالبلوتوث أولاً."
+
+msgid "Printer Ready"
+msgstr "الطابعة جاهزة"
+
+msgid "Printer connection failed. Check the configured UUIDs and browser permissions."
+msgstr "فشل الاتصال بالطابعة. تحقّق من معرّفات UUID وإذن المتصفح."
+
+msgid "Rongta RPP30 (Experimental / Not Verified)"
+msgstr "Rongta RPP30 (تجريبية / لم يتم التحقق منها)"
+
+msgid "Generic BLE Thermal Printer (Manual Configuration)"
+msgstr "طابعة حرارية عامة عبر BLE (إعداد يدوي)"
+
+msgid "Profile Name"
+msgstr "اسم الملف"
+
+msgid "Manufacturer"
+msgstr "الشركة المصنّعة"
+
+msgid "Company"
+msgstr "الشركة"
+
+msgid "Active"
+msgstr "نشط"
+
+msgid "Paper Width (mm)"
+msgstr "عرض الورق (مم)"
+
+msgid "Effective Printable Width (dots)"
+msgstr "العرض الفعلي القابل للطباعة (نقطة)"
+
+msgid "Print Resolution (dpi)"
+msgstr "دقة الطباعة (نقطة لكل بوصة)"
+
+msgid "BLE Chunk Size (bytes)"
+msgstr "حجم جزء BLE (بايت)"
+
+msgid "Inter-chunk Delay (ms)"
+msgstr "الفاصل بين الأجزاء (مللي ثانية)"
+
+msgid "Known Limitations and Notes"
+msgstr "القيود المعروفة والملاحظات"
+
+msgid "Verified Capabilities"
+msgstr "الإمكانات التي تم التحقق منها"
+
+msgid "Hardware Verification Evidence"
+msgstr "أدلة التحقق من الجهاز"
+
+msgid "Disconnect"
+msgstr "قطع الاتصال"
+
+msgid "Connect Printer"
+msgstr "الاتصال بالطابعة"
+
+msgid "Test Print"
+msgstr "طباعة تجريبية"
+
+msgid "Diagnostics"
+msgstr "التشخيصات"
+
+msgid "Copy Diagnostic Report"
+msgstr "نسخ تقرير التشخيص"
+
+msgid "Test data sent. Confirm the paper output at the printer."
+msgstr "تم إرسال بيانات الاختبار. تحقّق من خروج الورق من الطابعة."
+
+msgid "Test print failed. Check the connection and profile."
+msgstr "فشلت الطباعة التجريبية. تحقّق من الاتصال وملف التعريف."
+
+msgid "Diagnostic report copied."
+msgstr "تم نسخ تقرير التشخيص."
+
+msgid "Could not copy the diagnostic report."
+msgstr "تعذر نسخ تقرير التشخيص."
+
+msgid "Bluetooth Printer Diagnostics"
+msgstr "تشخيص طابعة البلوتوث"
+
+msgid "Browser Compatibility"
+msgstr "توافق المتصفح"
+
+msgid "Device Selection"
+msgstr "اختيار الجهاز"
+
+msgid "BLE Connection"
+msgstr "اتصال BLE"
+
+msgid "GATT Validation"
+msgstr "التحقق من GATT"
+
+msgid "Test Data Transmission"
+msgstr "اختبار إرسال البيانات"
+
+msgid "Physical Print Confirmation"
+msgstr "تأكيد الطباعة الفعلية"
+
+msgid "This secure page exposes Web Bluetooth."
+msgstr "تتيح هذه الصفحة الآمنة واجهة Web Bluetooth."
+
+msgid "Web Bluetooth is unavailable or this page is not secure. Use HTTPS and a compatible browser."
+msgstr "واجهة Web Bluetooth غير متاحة أو أن الصفحة غير آمنة. استخدم HTTPS ومتصفحاً متوافقاً."
+
+msgid "Continue"
+msgstr "متابعة"
+
+msgid "Select the intended printer in the browser's device chooser."
+msgstr "اختر الطابعة المطلوبة من نافذة اختيار الأجهزة في المتصفح."
+
+msgid "Select and Connect Printer"
+msgstr "اختيار الطابعة والاتصال بها"
+
+msgid "The printer is connected to the configured GATT service."
+msgstr "اتصلت الطابعة بخدمة GATT المُعدة."
+
+msgid "The printer is not connected. Select it again to reconnect."
+msgstr "الطابعة غير متصلة. اخترها مجدداً لإعادة الاتصال."
+
+msgid "The configured service and a writable characteristic were found."
+msgstr "تم العثور على الخدمة المُعدة وخاصية قابلة للكتابة."
+
+msgid "GATT validation failed. Check the UUIDs and browser authorization; this does not prove the printer lacks the service."
+msgstr "فشل التحقق من GATT. تحقّق من معرّفات UUID وإذن المتصفح؛ هذا لا يثبت أن الطابعة لا تملك الخدمة."
+
+msgid "The test page uses the configured raster protocol. A completed BLE write does not confirm paper output."
+msgstr "تستخدم صفحة الاختبار بروتوكول الصورة النقطية المُعد. اكتمال الكتابة عبر BLE لا يؤكد خروج الورق."
+
+msgid "Send Test Page"
+msgstr "إرسال صفحة اختبار"
+
+msgid "Test data was sent. Inspect the printer and confirm what happened."
+msgstr "تم إرسال بيانات الاختبار. افحص الطابعة وأكد ما حدث."
+
+msgid "I Confirmed the Test Page Printed"
+msgstr "أؤكد أن صفحة الاختبار طُبعت"
+
+msgid "It Did Not Print"
+msgstr "لم تتم الطباعة"
+
+msgid "The cashier confirmed the paper output for this session."
+msgstr "أكد أمين الصندوق خروج الورق في هذه الجلسة."
+
+msgid "Paper output was not confirmed. Review the profile and printer before retrying."
+msgstr "لم يتم تأكيد خروج الورق. راجع ملف التعريف والطابعة قبل إعادة المحاولة."
+
+msgid "The diagnostic step failed. Check browser permissions, the connection, and the printer profile."
+msgstr "فشلت خطوة التشخيص. تحقّق من أذونات المتصفح والاتصال وملف تعريف الطابعة."
+
+msgid "Close"
+msgstr "إغلاق"
+
+msgid "Flous Flow BLE Test"
+msgstr "اختبار البلوتوث من Flous Flow"
+
+msgid "Output is unconfirmed until checked"
+msgstr "لم يتم تأكيد نتيجة الطباعة بعد؛ تحقّق منها"
